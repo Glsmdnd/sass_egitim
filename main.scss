@@ -1,0 +1,53 @@
+$background-color:#e74c3c;
+$secondary-color:white;
+$font-size:px;
+body{
+    width: 960px;
+    margin: 0 auto ;
+    background: $background-color;
+}
+section{
+    article{
+        .article_title{
+            font-size:$font-size;
+            color: pink;
+        }
+        p{
+            .article_author{
+                font-weight: bold;
+                color:$secondary-color;
+            }
+            
+        }
+        .article_body{
+            a{
+                color:green;
+                text-decoration: none;
+                &:hover{
+                    color:$secondary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    display: inline-block;
+}
+.box1{
+    @extend .box;
+    background: blueviolet;
+    border-top-left-radius: 30px;
+}
+.box2{
+    @extend .box;
+
+}
+.box3{
+    @extend .box;
+    background:green;
+}
