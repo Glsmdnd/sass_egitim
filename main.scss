@@ -1,37 +1,15 @@
-$background-color:#e74c3c;
-$secondary-color:white;
-$font-size:px;
+@mixin border-generator($top-left, $top-right, $bottom-left, $bottom-right){
+    border-top-left-radius:$top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}
 body{
     width: 960px;
     margin: 0 auto ;
-    background: $background-color;
+  
 }
-section{
-    article{
-        .article_title{
-            font-size:$font-size;
-            color: pink;
-        }
-        p{
-            .article_author{
-                font-weight: bold;
-                color:$secondary-color;
-            }
-            
-        }
-        .article_body{
-            a{
-                color:green;
-                text-decoration: none;
-                &:hover{
-                    color:$secondary-color;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
 
-}
 .box{
     width: 200px;
     height: 200px;
@@ -40,8 +18,10 @@ section{
 }
 .box1{
     @extend .box;
-    background: blueviolet;
-    border-top-left-radius: 30px;
+    background:red;
+    @include border-generator(20px, 30px, 40px, 50px)
+  
+   
 }
 .box2{
     @extend .box;
@@ -49,5 +29,4 @@ section{
 }
 .box3{
     @extend .box;
-    background:green;
 }
