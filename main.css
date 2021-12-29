@@ -4,7 +4,7 @@ body {
   background: #e74c3c; }
 
 section article .article_title {
-  font-size: px;
+  font-size: 40px;
   color: pink; }
 section article p .article_author {
   font-weight: bold;
